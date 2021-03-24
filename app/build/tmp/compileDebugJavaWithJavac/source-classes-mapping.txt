@@ -1,0 +1,2 @@
+com/moucan/pagingsimple/BuildConfig.java
+ com.moucan.pagingsimple.BuildConfig
