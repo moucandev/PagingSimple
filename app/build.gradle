@@ -5,6 +5,7 @@ plugins {
     id 'com.moucan.versionplugin'
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -34,6 +35,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    kapt {
+        arguments {
+            arg("AROUTER_MODULE_NAME", project.getName())
+        }
+    }
 }
 
 dependencies {
@@ -46,10 +52,8 @@ dependencies {
     testImplementation DependencyVersion.junit
     androidTestImplementation DependencyVersion.junitTest
     androidTestImplementation DependencyVersion.espressoCore
-    implementation DependencyVersion.paging
-    implementation DependencyVersion.retrofit
-    implementation DependencyVersion.convertGson
-    implementation DependencyVersion.okHttp
-    implementation DependencyVersion.liveData
-    implementation DependencyVersion.viewModel
+    implementation DependencyVersion.aRouter
+    kapt DependencyVersion.aRouterCompiler
+    implementation project(':common')
+    implementation project(':business')
 }

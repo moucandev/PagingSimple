@@ -1,0 +1,63 @@
+import com.moucan.versionplugin.DependencyVersion
+import com.moucan.versionplugin.ProjectVersion
+
+plugins {
+    id 'com.moucan.versionplugin'
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion ProjectVersion.compileSdkVersion
+    buildToolsVersion ProjectVersion.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion ProjectVersion.minSdkVersion
+        targetSdkVersion ProjectVersion.targetSdkVersion
+        versionCode ProjectVersion.versionCode
+        versionName ProjectVersion.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    kapt {
+        arguments {
+            arg("AROUTER_MODULE_NAME", project.getName())
+        }
+    }
+}
+
+dependencies {
+
+    implementation DependencyVersion.kotlin
+    implementation DependencyVersion.coreKtx
+    implementation DependencyVersion.appcompat
+    implementation DependencyVersion.material
+    implementation DependencyVersion.constraintLayout
+    testImplementation DependencyVersion.junit
+    androidTestImplementation DependencyVersion.junitTest
+    androidTestImplementation DependencyVersion.espressoCore
+    api DependencyVersion.paging
+    api DependencyVersion.retrofit
+    api DependencyVersion.convertGson
+    api DependencyVersion.okHttp
+    api DependencyVersion.liveData
+    api DependencyVersion.viewModel
+    api DependencyVersion.aRouter
+    kapt DependencyVersion.aRouterCompiler
+}

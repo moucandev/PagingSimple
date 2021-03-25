@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.moucan.common.http.GitRepo
 
 class RepoAdapter : PagingDataAdapter<GitRepo, RepoAdapter.ViewHolder>(COMPARATOR) {
     companion object {
@@ -21,6 +22,12 @@ class RepoAdapter : PagingDataAdapter<GitRepo, RepoAdapter.ViewHolder>(COMPARATO
         }
     }
 
+    private lateinit var mClickListener: OnItemClickListener
+
+    fun setOnClickListener(mOnClickListener: OnItemClickListener) {
+        this.mClickListener = mOnClickListener
+    }
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val name: TextView = itemView.findViewById(R.id.name_text)
         val description: TextView = itemView.findViewById(R.id.description_text)
@@ -29,15 +36,19 @@ class RepoAdapter : PagingDataAdapter<GitRepo, RepoAdapter.ViewHolder>(COMPARATO
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val repo = getItem(position)
-        repo?.let {
-            holder.name.text = it.name
-            holder.description.text = it.description
-            holder.starCount.text = it.starCount.toString()
+        repo?.let { re ->
+            holder.name.text = re.name
+            holder.description.text = re.description
+            holder.starCount.text = re.starCount.toString()
+            holder.itemView.setOnClickListener { mClickListener.onClick(it) }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.repo_item, parent, false)
         return ViewHolder(view)
+    }
+    interface OnItemClickListener {
+        fun onClick(view: View)
     }
 }
