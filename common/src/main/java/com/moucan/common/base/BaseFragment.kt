@@ -10,14 +10,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
-import androidx.viewbinding.ViewBinding
 import com.moucan.common.ext.getVmClazz
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import java.lang.reflect.InvocationTargetException
-import java.lang.reflect.ParameterizedType
 
-abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding> : Fragment() {
+abstract class BaseFragment<VM : BaseViewModel> : Fragment() {
     //是否第一次加载
     private var isFirst: Boolean = true
 
@@ -25,38 +22,23 @@ abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding> : Fragment() {
 
     lateinit var mActivity: AppCompatActivity
 
-    private var _bind: VB? = null
-    protected val mViewBinding get() = _bind!!
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val superclass = javaClass.genericSuperclass as ParameterizedType
-        val clazz = superclass.actualTypeArguments[0] as Class<*>
-        try {
-            val method = clazz.getDeclaredMethod(
-                "inflate",
-                LayoutInflater::class.java,
-                ViewGroup::class.java,
-                Boolean::class.javaPrimitiveType
-            )
-            _bind = method.invoke(null, inflater, container, false) as VB
-        } catch (e: NoSuchMethodException) {
-            e.printStackTrace()
-        } catch (e: IllegalAccessException) {
-            e.printStackTrace()
-        } catch (e: InvocationTargetException) {
-            e.printStackTrace()
-        }
-        return mViewBinding.root
+        return inflater.inflate(layoutId(), container, false)
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
         mActivity = context as AppCompatActivity
     }
+
+    /**
+     * 当前Fragment绑定的视图布局
+     */
+    abstract fun layoutId(): Int
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -117,10 +99,5 @@ abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding> : Fragment() {
      */
     open fun lazyLoadTime(): Long {
         return 300
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _bind = null
     }
 }

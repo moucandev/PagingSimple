@@ -10,6 +10,13 @@ object ProjectVersion {
     const val versionName = "1.0"
 }
 
+object SignConfig {
+    const val storeFile = "simple.jks"
+    const val keyAlias = "simple_key"
+    const val storePassword = "moucan6229"
+    const val keyPassWord = "moucan6229"
+}
+
 object LibVersion {
     //AndroidX
     const val appcompat = "1.2.0"
@@ -35,6 +42,7 @@ object LibVersion {
     //ARouter
     const val aRouter = "1.5.0"
     const val aRouterCompiler = "1.2.2"
+    const val multiDex = "1.0.3"
 }
 
 object DependencyVersion {
@@ -62,4 +70,6 @@ object DependencyVersion {
     //ARouter
     const val aRouter = "com.alibaba:arouter-api:${LibVersion.aRouter}"
     const val aRouterCompiler = "com.alibaba:arouter-compiler:${LibVersion.aRouterCompiler}"
+    //multiDex
+    const val multiDex = "com.android.support:multidex:${LibVersion.multiDex}"
 }

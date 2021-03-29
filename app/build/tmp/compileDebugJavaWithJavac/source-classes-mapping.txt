@@ -1,8 +1,8 @@
-com/alibaba/android/arouter/routes/ARouter$$Group$$app.java
- com.alibaba.android.arouter.routes.ARouter$$Group$$app
+com/moucan/pagingsimple/BuildConfig.java
+ com.moucan.pagingsimple.BuildConfig
 com/alibaba/android/arouter/routes/ARouter$$Root$$app.java
  com.alibaba.android.arouter.routes.ARouter$$Root$$app
 com/alibaba/android/arouter/routes/ARouter$$Providers$$app.java
  com.alibaba.android.arouter.routes.ARouter$$Providers$$app
-com/moucan/pagingsimple/BuildConfig.java
- com.moucan.pagingsimple.BuildConfig
+com/alibaba/android/arouter/routes/ARouter$$Group$$app.java
+ com.alibaba.android.arouter.routes.ARouter$$Group$$app

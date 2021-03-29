@@ -52,6 +52,7 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/moucan/.gr
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/moucan/.gradle/caches/transforms-2/files-2.1/5cbc89502a319375fe3d3baa8bb73643/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/moucan/.gradle/caches/transforms-2/files-2.1/2aa5e5a6a997d5c7425ecea4df76cd34/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/moucan/.gradle/caches/transforms-2/files-2.1/15aa155ad0ec2eb1991fa443b30ecfef/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.multidex:multidex:2.0.0] /Users/moucan/.gradle/caches/transforms-2/files-2.1/a9f2a47b64e192a18d42097b9230ad06/multidex-2.0.0/AndroidManifest.xml:17:1-22:12
 INJECTED from /Users/moucan/WorkPlace/PagingSimple/app/src/main/AndroidManifest.xml:2:1-24:12
 INJECTED from /Users/moucan/WorkPlace/PagingSimple/app/src/main/AndroidManifest.xml:2:1-24:12
 INJECTED from /Users/moucan/WorkPlace/PagingSimple/app/src/main/AndroidManifest.xml:2:1-24:12
@@ -215,6 +216,8 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/moucan/.gradle/caches/
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/moucan/.gradle/caches/transforms-2/files-2.1/2aa5e5a6a997d5c7425ecea4df76cd34/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/moucan/.gradle/caches/transforms-2/files-2.1/15aa155ad0ec2eb1991fa443b30ecfef/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/moucan/.gradle/caches/transforms-2/files-2.1/15aa155ad0ec2eb1991fa443b30ecfef/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.multidex:multidex:2.0.0] /Users/moucan/.gradle/caches/transforms-2/files-2.1/a9f2a47b64e192a18d42097b9230ad06/multidex-2.0.0/AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.0] /Users/moucan/.gradle/caches/transforms-2/files-2.1/a9f2a47b64e192a18d42097b9230ad06/multidex-2.0.0/AndroidManifest.xml:20:5-43
 INJECTED from /Users/moucan/WorkPlace/PagingSimple/app/src/main/AndroidManifest.xml
 INJECTED from /Users/moucan/WorkPlace/PagingSimple/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion

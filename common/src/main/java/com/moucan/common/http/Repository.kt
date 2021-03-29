@@ -3,6 +3,7 @@ package com.moucan.common.http
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
+import com.moucan.common.repo.GitRepo
 import kotlinx.coroutines.flow.Flow
 
 object Repository {

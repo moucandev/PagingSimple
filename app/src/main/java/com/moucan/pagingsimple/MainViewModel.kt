@@ -4,7 +4,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.moucan.common.base.BaseViewModel
-import com.moucan.common.http.GitRepo
+import com.moucan.common.repo.GitRepo
 import com.moucan.common.http.Repository
 import kotlinx.coroutines.flow.Flow
 

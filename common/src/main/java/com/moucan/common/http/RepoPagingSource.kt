@@ -2,6 +2,7 @@ package com.moucan.common.http
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
+import com.moucan.common.repo.GitRepo
 
 class RepoPagingSource(private val gitService: GitService) : PagingSource<Int, GitRepo>() {
     override fun getRefreshKey(state: PagingState<Int, GitRepo>): Int? = null

@@ -59,5 +59,6 @@ dependencies {
     api DependencyVersion.liveData
     api DependencyVersion.viewModel
     api DependencyVersion.aRouter
+    api DependencyVersion.multiDex
     kapt DependencyVersion.aRouterCompiler
 }

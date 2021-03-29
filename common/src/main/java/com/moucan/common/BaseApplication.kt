@@ -4,9 +4,10 @@ import android.app.Application
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelStore
 import androidx.lifecycle.ViewModelStoreOwner
+import androidx.multidex.MultiDexApplication
 import com.alibaba.android.arouter.launcher.ARouter
 
-open class BaseApplication : Application(), ViewModelStoreOwner {
+open class BaseApplication : MultiDexApplication(), ViewModelStoreOwner {
     private lateinit var mAppViewModelStore: ViewModelStore
     private var mFactory: ViewModelProvider.Factory? = null
 

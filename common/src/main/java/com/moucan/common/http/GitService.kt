@@ -1,5 +1,6 @@
 package com.moucan.common.http
 
+import com.moucan.common.response.GitRepoResponse
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET

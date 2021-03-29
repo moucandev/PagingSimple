@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.moucan.common.http.GitRepo
+import com.moucan.common.repo.GitRepo
 
 class RepoAdapter : PagingDataAdapter<GitRepo, RepoAdapter.ViewHolder>(COMPARATOR) {
     companion object {
