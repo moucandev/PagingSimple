@@ -43,6 +43,11 @@ object LibVersion {
     const val aRouter = "1.5.0"
     const val aRouterCompiler = "1.2.2"
     const val multiDex = "1.0.3"
+    //room
+    const val room = "2.2.6"
+    const val hilt = "2.28-alpha"
+    const val viewPager2 = "1.1.0-alpha01"
+    const val design = "28.0.0"
 }
 
 object DependencyVersion {
@@ -72,4 +77,13 @@ object DependencyVersion {
     const val aRouterCompiler = "com.alibaba:arouter-compiler:${LibVersion.aRouterCompiler}"
     //multiDex
     const val multiDex = "com.android.support:multidex:${LibVersion.multiDex}"
+    //room
+    const val roomKtx = "androidx.room:room-ktx:${LibVersion.room}"
+    const val roomTesting = "androidx.room:room-testing:${LibVersion.room}"
+    const val roomRuntime = "androidx.room:room-runtime:${LibVersion.room}"
+    const val roomCompiler = "androidx.room:room-compiler:${LibVersion.room}"
+    const val hilt = "com.google.dagger:hilt-android:${LibVersion.hilt}"
+    const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${LibVersion.hilt}"
+    const val viewPager2 = "androidx.viewpager2:viewpager2:${LibVersion.viewPager2}"
+    const val design = "com.android.support:design:${LibVersion.design}"
 }

@@ -1,7 +1,7 @@
 package com.moucan.pagingsimple
 
-import com.alibaba.android.arouter.launcher.ARouter
 import com.moucan.common.BaseApplication
+import dagger.hilt.android.HiltAndroidApp
 
 class SimpleApplication : BaseApplication() {
 

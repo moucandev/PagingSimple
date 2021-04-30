@@ -40,6 +40,9 @@ android {
             arg("AROUTER_MODULE_NAME", project.getName())
         }
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -48,6 +51,8 @@ dependencies {
     implementation DependencyVersion.appcompat
     implementation DependencyVersion.material
     implementation DependencyVersion.constraintLayout
+    implementation DependencyVersion.design
+    implementation DependencyVersion.viewPager2
     testImplementation DependencyVersion.junit
     androidTestImplementation DependencyVersion.junitTest
     androidTestImplementation DependencyVersion.espressoCore

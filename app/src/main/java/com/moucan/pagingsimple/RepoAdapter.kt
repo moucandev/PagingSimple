@@ -8,8 +8,11 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.moucan.common.repo.GitRepo
+import dagger.hilt.android.scopes.ActivityScoped
+import javax.inject.Inject
 
-class RepoAdapter : PagingDataAdapter<GitRepo, RepoAdapter.ViewHolder>(COMPARATOR) {
+
+class RepoAdapter @Inject constructor(): PagingDataAdapter<GitRepo, RepoAdapter.ViewHolder>(COMPARATOR) {
     companion object {
         private val COMPARATOR = object : DiffUtil.ItemCallback<GitRepo>() {
             override fun areItemsTheSame(oldItem: GitRepo, newItem: GitRepo): Boolean {
