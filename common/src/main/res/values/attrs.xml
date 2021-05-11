@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MapView">
+        <attr name="mv_background" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="TimelineView">
+        <attr name="timelineBackground" format="color"/>
+        <attr name="timelineDistance" format="float"/>
+    </declare-styleable>
+</resources>

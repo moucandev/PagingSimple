@@ -40,8 +40,9 @@ android {
             arg("AROUTER_MODULE_NAME", project.getName())
         }
     }
-    dataBinding {
-        enabled = true
+    buildFeatures{
+        viewBinding = true
+        dataBinding = true
     }
 }
 

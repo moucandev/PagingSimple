@@ -1,19 +1,21 @@
 package com.moucan.common.base
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.moucan.common.ext.getVmClazz
 
 abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity() {
     lateinit var mViewModel: VM
-    protected abstract fun layoutId(): Int
+    protected abstract fun layout(): View
     protected abstract fun initView(savedInstanceState: Bundle?)
     protected abstract fun registerObserver()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(layoutId())
+        bindingView()
+        setContentView(layout())
         init(savedInstanceState)
     }
 
@@ -27,6 +29,8 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity() {
     private fun createViewModel(): VM {
         return ViewModelProvider(this).get(getVmClazz(this))
     }
+
+    protected open fun bindingView(){}
 
     protected open fun notifyData() {}
 }
