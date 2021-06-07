@@ -24,6 +24,7 @@ class MainActivity : BaseActivity<MainViewModel>() {
     override fun initView(savedInstanceState: Bundle?) {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
+        ARouter.getInstance().build(PathConstant.BUSINESS_PATH).navigation()
         lifecycleScope.launch {
             mViewModel.getData().collect {
                 adapter.submitData(it)

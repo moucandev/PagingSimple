@@ -5,14 +5,14 @@
     android:id="@+id/content_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BusinessActivity">
+    tools:context=".busy.BusinessActivity">
 
     <Button
         android:id="@+id/bt_window_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/pop_window"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

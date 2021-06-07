@@ -1,10 +1,11 @@
-package com.moucan.business
+package com.moucan.business.busy
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Point
 import android.os.Bundle
 import android.view.Gravity
@@ -16,6 +17,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.moucan.business.inject.InjectTestActivity
+import com.moucan.business.R
 import com.moucan.business.databinding.ActivityBusinessBinding
 import com.moucan.common.PathConstant
 import com.moucan.common.base.BaseActivity
@@ -29,8 +32,9 @@ class BusinessActivity : BaseActivity<BusinessViewModel>() {
 
     override fun initView(savedInstanceState: Bundle?) {
         binding.btWindowUp.setOnClickListener {
-            it.visibility = View.GONE
-            showViewPage(it)
+//            it.visibility = View.GONE
+//            showViewPage(it)
+            startActivity(Intent(this, InjectTestActivity::class.java).putExtra("TextContent", "This is InjectExtra send message!!!"))
         }
 //        anim()
     }

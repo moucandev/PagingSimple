@@ -1,4 +1,4 @@
-package com.moucan.business
+package com.moucan.business.busy
 
 import com.moucan.common.base.BaseViewModel
 
