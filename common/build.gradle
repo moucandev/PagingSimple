@@ -68,4 +68,5 @@ dependencies {
     kapt DependencyVersion.aRouterCompiler
     api DependencyVersion.hilt
     kapt DependencyVersion.hiltCompiler
+    debugImplementation DependencyVersion.leakcanary
 }

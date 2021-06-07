@@ -48,6 +48,7 @@ object LibVersion {
     const val hilt = "2.28-alpha"
     const val viewPager2 = "1.1.0-alpha01"
     const val design = "28.0.0"
+    const val leakCanary = "2.4"
 }
 
 object DependencyVersion {
@@ -86,4 +87,5 @@ object DependencyVersion {
     const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${LibVersion.hilt}"
     const val viewPager2 = "androidx.viewpager2:viewpager2:${LibVersion.viewPager2}"
     const val design = "com.android.support:design:${LibVersion.design}"
+    const val leakcanary = "com.squareup.leakcanary:leakcanary-android:${LibVersion.leakCanary}"
 }
