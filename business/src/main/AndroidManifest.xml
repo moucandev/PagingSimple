@@ -3,7 +3,7 @@
     package="com.moucan.business">
 
     <application>
-        <activity android:name=".inject.InjectTestActivity"></activity>
+        <activity android:name=".inject.InjectTestActivity" />
         <activity android:name=".busy.BusinessActivity" />
     </application>
 

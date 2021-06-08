@@ -10,6 +10,8 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.moucan.common.PathConstant
 import com.moucan.common.base.BaseActivity
+import com.moucan.common.click.InjectClick
+import com.moucan.common.click.OnClick
 import com.moucan.pagingsimple.databinding.ActivityMainBinding
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -21,10 +23,17 @@ class MainActivity : BaseActivity<MainViewModel>() {
 
     private lateinit var binding: ActivityMainBinding
 
+    @OnClick(R.id.tv_content_detail)
+    fun onClick(view: View) {
+        if (view.id == R.id.tv_content_detail) {
+            binding.tvContentDetail.visibility = View.GONE
+        }
+    }
+
     override fun initView(savedInstanceState: Bundle?) {
+        InjectClick.injectOnClick(this)
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
-        ARouter.getInstance().build(PathConstant.BUSINESS_PATH).navigation()
         lifecycleScope.launch {
             mViewModel.getData().collect {
                 adapter.submitData(it)

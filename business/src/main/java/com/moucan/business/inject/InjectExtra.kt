@@ -8,4 +8,4 @@ package com.moucan.business.inject
  */
 @Target(AnnotationTarget.FIELD)
 @Retention(AnnotationRetention.RUNTIME)
-annotation class InjectExtra(val value: String)
+annotation class InjectExtra(val value: String = "")

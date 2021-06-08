@@ -7,8 +7,8 @@ import com.moucan.common.base.BaseActivity
 class InjectTestActivity : BaseActivity<InjectTestViewModel>() {
     lateinit var binding: ActivityInjectTestBinding
 
-    @InjectExtra("TextContent")
-    lateinit var content: String
+    @InjectExtra
+    lateinit var textContent: String
 
     override fun bindingView() {
         binding = ActivityInjectTestBinding.inflate(layoutInflater)
@@ -18,8 +18,8 @@ class InjectTestActivity : BaseActivity<InjectTestViewModel>() {
 
 
     override fun initView(savedInstanceState: Bundle?) {
-        injectString(this)
-        binding.tvContent.text = content
+        injectExtra(this)
+        binding.tvContent.text = textContent
 
     }
 
