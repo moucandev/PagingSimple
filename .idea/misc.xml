@@ -8,6 +8,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/shape_button_circular.xml" value="0.3265" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.37604166666666666" />
         <entry key="business/src/main/res/layout/activity_business.xml" value="0.1828774062816616" />
       </map>
     </option>
