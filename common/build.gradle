@@ -48,7 +48,7 @@ dependencies {
     implementation DependencyVersion.kotlin
     implementation DependencyVersion.coreKtx
     implementation DependencyVersion.appcompat
-    implementation DependencyVersion.material
+    api DependencyVersion.material
     implementation DependencyVersion.constraintLayout
     testImplementation DependencyVersion.junit
     androidTestImplementation DependencyVersion.junitTest
@@ -63,6 +63,8 @@ dependencies {
     api DependencyVersion.multiDex
     api DependencyVersion.roomRuntime
     api DependencyVersion.roomKtx
+    api DependencyVersion.flexbox
+    api DependencyVersion.swipeRefreshLayout
     testImplementation DependencyVersion.roomTesting
     kapt DependencyVersion.roomCompiler
     kapt DependencyVersion.aRouterCompiler

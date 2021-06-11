@@ -1,5 +1,6 @@
 package com.moucan.pagingsimple
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -16,6 +17,7 @@ import com.moucan.common.click.OnClick
 import com.moucan.common.http.CustomNetApi
 import com.moucan.common.retrofit.method.CustomRetrofit
 import com.moucan.pagingsimple.databinding.ActivityMainBinding
+import com.moucan.pagingsimple.nested.NestedScrollActivity
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import okhttp3.Call
@@ -31,15 +33,15 @@ class MainActivity : BaseActivity<MainViewModel>() {
 
     private lateinit var binding: ActivityMainBinding
 
-//    @OnClick(R.id.tv_content_detail)
-//    fun onClick(view: View) {
-//        if (view.id == R.id.tv_content_detail) {
-//            binding.tvContentDetail.visibility = View.GONE
-//        }
-//    }
+    @OnClick(R.id.tv_fruit)
+    fun onClick(view: View) {
+        if (view.id == R.id.tv_fruit) {
+            startActivity(Intent(this, NestedScrollActivity::class.java))
+        }
+    }
 
     override fun initView(savedInstanceState: Bundle?) {
-//        InjectClick.injectOnClick(this)
+        InjectClick.injectOnClick(this)
         val retrofit = CustomRetrofit.Builder().baseUrl("https://restapi.amap.com").build()
         customNetApi = retrofit.create(CustomNetApi::class.java)
 //        binding.tvContentDetail.setOnClickListener{

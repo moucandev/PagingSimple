@@ -49,6 +49,8 @@ object LibVersion {
     const val viewPager2 = "1.1.0-alpha01"
     const val design = "28.0.0"
     const val leakCanary = "2.4"
+    const val flexbox = "2.0.1"
+    const val swipeRefresh = "1.1.0"
 }
 
 object DependencyVersion {
@@ -88,4 +90,6 @@ object DependencyVersion {
     const val viewPager2 = "androidx.viewpager2:viewpager2:${LibVersion.viewPager2}"
     const val design = "com.android.support:design:${LibVersion.design}"
     const val leakcanary = "com.squareup.leakcanary:leakcanary-android:${LibVersion.leakCanary}"
+    const val flexbox = "com.google.android:flexbox:${LibVersion.flexbox}"
+    const val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:${LibVersion.swipeRefresh}"
 }
