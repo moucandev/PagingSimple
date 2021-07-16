@@ -25,13 +25,8 @@ fun Activity.injectOnClick(activity: Activity) {
             val ids = onClick.value
             val o = Proxy.newProxyInstance(
                 View.OnClickListener::class.java.classLoader,
-                arrayOf(View.OnClickListener::class.java), object : InvocationHandler{
-                    override fun invoke(proxy: Any?, method: Method?, args: Array<out Any>?): Any {
-                        return it.invoke(activity, args)
-                    }
-
-                }
-            )
+                arrayOf(View.OnClickListener::class.java)
+            ) { _, _, args -> it.invoke(activity, args) }
             ids.forEach { id ->
                 val view = activity.findViewById<View>(id)
                 val onClickListener =
